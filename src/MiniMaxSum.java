@@ -23,12 +23,12 @@ public class MiniMaxSum {
 
     public static void miniMaxSum(List<Integer> arr) {
 
-        // We use the Integer data type to deter int overflow
-        // Instanstiating an integer that will hold the largest, smallest, and sum of the array
-        Integer largest = arr.get(0);
-        Integer smallest = arr.get(0);
+        // We use the long data type to deter int overflow
+        // Instanstiating a long that will hold the largest, smallest, and sum of the array
+        long largest = arr.get(0);
+        long smallest = arr.get(0);
 
-        Integer sum = 0;
+        long sum = 0;
 
         // We iterate through the array using the max and min functions to find the largest and smallest numbers
         for (int i = 0; i < arr.size(); i++) {
@@ -39,8 +39,8 @@ public class MiniMaxSum {
         }
 
         // We subtract the largest and smallest values from the total sums
-        Integer maxSum = sum - smallest;
-        Integer minSum = sum - largest;
+        long maxSum = sum - smallest;
+        long minSum = sum - largest;
 
         System.out.println(minSum + " " + maxSum);
     }
