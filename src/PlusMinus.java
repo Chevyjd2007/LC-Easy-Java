@@ -10,6 +10,10 @@ import java.util.stream.*;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
+/*
+Part of the Hackerrank 1 week preparation kit.
+
+ */
 class PlusMinus {
 
     /*
