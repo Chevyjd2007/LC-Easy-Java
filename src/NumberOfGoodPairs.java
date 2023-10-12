@@ -1,5 +1,6 @@
 public class NumberOfGoodPairs {
 
+    // Brute force approach. IIRC there's a dp (dynamic programming) solution.
     public int numIdenticalPairs(int[] nums) {
 
         int count = 0;
