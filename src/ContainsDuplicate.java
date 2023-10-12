@@ -24,6 +24,11 @@ public class ContainsDuplicate {
         return false;
     }
 
+    /*
+        ChatGPT solution using hashsets.
+        We iterate through the array nums while checking if the value is already in the hashset.
+        If not, then we add the value into the hashset. If it is contained in the Hashset, we return true.
+     */
     public boolean containsDuplicate1(int[] nums) {
         HashSet<Integer> set = new HashSet<>();
 
