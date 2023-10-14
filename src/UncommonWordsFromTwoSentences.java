@@ -3,8 +3,8 @@ import java.util.*;
 public class UncommonWordsFromTwoSentences {
 
     public static void main(String[] argsdasd) {
-        String s1 = "this apple is sweet";
-        String s2 = "this apple is sour";
+        String s1 = "apple apple";
+        String s2 = "banana";
 
         String[] answer = uncommonFromSentences(s1, s2);
 
@@ -15,6 +15,35 @@ public class UncommonWordsFromTwoSentences {
     }
 
     public static String[] uncommonFromSentences(String s1, String s2) {
+
+        // This is the map that will store the occurrences of words in both strings
+        Map<String, Integer> map = new HashMap();
+
+        // Split both strings into an array where words are split into individual strings
+        String[] s = (s1 + "" + s2).split(" ");
+
+        // We add the number of occurrences (from the array including both from both strings) to a map
+        for (String word : s) {
+            map.put(word, map.getOrDefault(word, 0) + 1);
+        }
+
+        // This list will hold the uncommon words hence the answer
+        List<String> uncommonWords = new ArrayList<>();
+
+        // We iterate through the map only adding to the list of uncommon words the keys with only 1 occurrence
+        for (String word : map.keySet()) {
+            if (map.get(word) == 1) {
+                uncommonWords.add(word);
+            }
+        }
+
+        // return the array equivalent of our uncommonWords list
+        return uncommonWords.toArray(new String[0]);
+
+    }
+
+    // This was my initial solution using hashsets but having issues in edge cases with duplicate values in one of the arrays
+    public static String[] uncommonFromSentences1(String s1, String s2) {
 
         int counter = 0;
 
