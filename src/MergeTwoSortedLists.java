@@ -3,14 +3,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-class ListNode {
-      int val;
-      ListNode next;
-      ListNode() {}
-      ListNode(int val) { this.val = val; }
-      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-  }
-
 public class MergeTwoSortedLists {
 
     public static void main(String[] args) {
@@ -26,6 +18,14 @@ public class MergeTwoSortedLists {
 
         System.out.println(mergerTwoLists(list1, list2));
 
+    }
+
+    class ListNode {
+        int val;
+        ListNode next;
+        ListNode() {}
+        ListNode(int val) { this.val = val; }
+        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
     }
 
     /*
@@ -50,7 +50,7 @@ public class MergeTwoSortedLists {
     /*
         With help from chatGPT we use a two pointer approach that works with the custom class ListNode.
      */
-    public static ListNode mergeTwoLists(ListNode list1, ListNode list2){
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2){
         // Create a dummy node to act as the starting point of the merged list.
         // This helps in simplifying the code as we don't have to handle the head node as a special case.
         ListNode dummy = new ListNode(-1);
