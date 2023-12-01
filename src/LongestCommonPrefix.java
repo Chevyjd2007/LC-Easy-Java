@@ -1,21 +1,16 @@
-public class LongestCommonPrefix {
-
+class LCP {
     public static void main(String[] args) {
-        LCP lcp = new LCP();
+
 
         String[] example = {"flower", "flight", "flow"};
 
-        String answer = lcp.longestCommonPrefix(example);
+        String answer = longestCommonPrefix(example);
 
         System.out.println(answer);
 
     }
 
-
-}
-
-class LCP {
-    public String longestCommonPrefix(String[] arr) {
+    public static String longestCommonPrefix(String[] arr) {
         // Mutable string we can append characters in
         StringBuilder lcp = new StringBuilder();
         // This variable will hold the lenght of the shortest string
